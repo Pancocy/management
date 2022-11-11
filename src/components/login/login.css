@@ -1,0 +1,60 @@
+.login {
+  height: 100%;
+  width: 100%;
+  background: url('/src/assets/imgs/login/bg.jpg') no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login .drop-shadow {
+  height: 100%;
+  width: 100%;
+  filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.5));
+}
+.login .drop-shadow .glass {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  background: url('/src/assets/imgs/login/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  clip-path: inset(10px 1000px 10px 50px);
+  filter: blur(20px);
+}
+.formgroup {
+  position: absolute;
+  height: 650px;
+  width: 350px;
+  color: #fff;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+  top: 25px;
+  left: 75px;
+  padding: 30px 15px;
+}
+.formgroup h2 {
+  color: aliceblue;
+  font-size: 30px;
+  font-family: robot;
+}
+.formgroup Form {
+  margin-top: 80px;
+  color: #fff;
+}
+.formgroup Form .ant-input-affix-wrapper {
+  border-radius: 25px;
+}
+.formgroup Form button {
+  width: 100%;
+  border-radius: 25px;
+}
+.errtip .ant-message-notice-content {
+  border-radius: 25px;
+  background-color: #f07d7d;
+}
+.truetip .ant-message-notice-content {
+  border-radius: 25px;
+  background-color: #21c35c;
+}

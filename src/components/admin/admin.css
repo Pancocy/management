@@ -1,0 +1,48 @@
+header {
+  display: flex;
+  height: 80px !important;
+  justify-content: space-between;
+  align-items: center;
+}
+header .info {
+  color: #816f6f;
+}
+header .info span {
+  margin: 0 10px;
+}
+header .logo {
+  color: #816f6f;
+  display: flex;
+  justify-content: space-around;
+}
+header .logo .title {
+  font-size: 16px;
+  margin-left: 30px;
+}
+header .logo .title:hover {
+  cursor: pointer;
+}
+.ant-breadcrumb {
+  background-color: #f0f2ff;
+}
+.ant-breadcrumb ol {
+  height: 50px;
+  align-items: center;
+}
+.ant-breadcrumb ol li {
+  line-height: 4;
+  width: 100px;
+  text-align: center;
+  position: relative;
+}
+.ant-breadcrumb ol li span {
+  color: #99f;
+}
+.ant-breadcrumb ol li::after {
+  content: '';
+  border: 10px solid transparent;
+  border-top-color: #f0f2ff;
+  position: absolute;
+  top: 50px;
+  left: 40px;
+}

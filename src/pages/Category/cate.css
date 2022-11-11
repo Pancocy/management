@@ -1,0 +1,10 @@
+.cateIput{
+    width: 100%;
+    outline: .5px solid #9999FF;
+    border: none;
+}
+.loadingTxt{
+    color: #9999FF;
+    display: block;
+    margin: 30px 0 0 0;
+}
