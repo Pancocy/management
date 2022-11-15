@@ -11,6 +11,7 @@ import Bar from '../../pages/Charts/bar.jsx'
 import Pie from '../../pages/Charts/pie.jsx'
 import Line from '../../pages/Charts/line.jsx'
 import Order from '../../pages/Orders/'
+import Blank from '../../pages/Role/blank';
 //引入mune配置文件
 import menuList from '../../config/menuConfig'
 const { Content } = Layout
@@ -49,19 +50,21 @@ export default function Context() {
                     padding: 24,
                     margin: 0,
                     minHeight: 280,
-                    background: '#fff'
+                    background: '#fff',
+                    overflowY:'scroll'
                 }}
             >
                 <Routes>
                     <Route path='*'  element={<Home />}></Route>
                     <Route path='/category' element={<Category />}></Route>
-                    <Route path='/product' element={<Goods />}></Route>
+                    <Route path='/product/*' element={<Goods />}></Route>
                     <Route path='/user' element={<User />} ></Route>
                     <Route path='/role' element={<Role />}></Route>
                     <Route path='/charts/bar' element={<Bar />}></Route>
                     <Route path='/charts/line' element={<Line />}></Route>
                     <Route path='/charts/pie' element={<Pie />}></Route>
                     <Route path='/order' element={<Order />}></Route>
+                    <Route path='/blank' element={<Blank />}></Route>
                 </Routes>
             </Content>
         </Layout>

@@ -8,3 +8,6 @@
     display: block;
     margin: 30px 0 0 0;
 }
+.actions:hover{
+    color: #9999FF;
+}

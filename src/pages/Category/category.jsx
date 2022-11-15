@@ -43,9 +43,9 @@ export default function Category() {
       width: 300,
       render: (data) => (
         <Space size="middle">
-          <a onClick={()=>{showName(data)}}>修改分类</a>
+          <a className='actions' onClick={()=>{showName(data)}}>修改分类</a>
           {
-            parentId === 0 ? (<a onClick={() => { setId(data._id); setTitle(data.name) }}>查看子类</a>) : null
+            parentId === 0 ? (<a className='actions' onClick={() => { setId(data._id); setTitle(data.name) }}>查看子类</a>) : null
           }
         </Space>
       ),
