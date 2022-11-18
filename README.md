@@ -16,16 +16,52 @@
 npm i --force
 ```
 
-
 ##### 	进行依赖的安装.
+
+##### 使用：
+
+```
+npm start
+```
+
+启动项目。
 
 ### 3.项目目录及文件说明
 
-
++---public
+\---src
+    +---api
+    |   +---admin
+    |   +---category
+    |   +---goods
+    |   +---login
+    |   +---role
+    |   \---user
+    +---assets
+    |   +---imgs
+    |   |   \---login
+    |   \---reset
+    +---components
+    |   +---admin
+    |   +---context
+    |   +---login
+    |   +---menuBar
+    |   \---Top
+    +---config
+    +---pages
+    |   +---Category
+    |   |   \---goodSonPages
+    |   +---Charts
+    |   +---Home
+    |   +---Orders
+    |   +---Role
+    |   \---User
+    \---utils
 
 ### 4.后端服务及接口说明
 
-
+> 后端项目地址：https://github.com/Pancocy/management-server
+>
 
 ### 5.写在最后
 
