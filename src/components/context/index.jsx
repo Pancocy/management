@@ -14,6 +14,7 @@ import Order from '../../pages/Orders/'
 import Blank from '../../pages/Role/blank';
 //引入mune配置文件
 import menuList from '../../config/menuConfig'
+import NotFound from '../../pages/NotFound';
 const { Content } = Layout
 export default function Context() {
     //匹配当前地址显示面包屑
@@ -55,7 +56,7 @@ export default function Context() {
                 }}
             >
                 <Routes>
-                    <Route path='*'  element={<Home />}></Route>
+                    <Route path='/'  element={<Home />}></Route>
                     <Route path='/category' element={<Category />}></Route>
                     <Route path='/product/*' element={<Goods />}></Route>
                     <Route path='/user' element={<User />} ></Route>
@@ -65,6 +66,7 @@ export default function Context() {
                     <Route path='/charts/pie' element={<Pie />}></Route>
                     <Route path='/order' element={<Order />}></Route>
                     <Route path='/blank' element={<Blank />}></Route>
+                    <Route path='/*' element={<NotFound />}></Route>
                 </Routes>
             </Content>
         </Layout>
