@@ -60,8 +60,6 @@ npm start
 
 ### 4.后端服务及接口说明
 
-> 后端项目:项目目录下的 admin-server_final文件夹 使用：npm start启动后台服务
->使用 npm start启动后台服务
 
 ### 5.写在最后
 
