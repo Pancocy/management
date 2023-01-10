@@ -8,19 +8,23 @@ import storageUtils from '../../utils/storageUtils'
 import memoryUtils from '../../utils/memoryUtils'
 //引入获取天气和位置的api
 import {City,Weather} from '../../api/admin/weather'
+import { connect } from 'react-redux';
+
+import { weatherCreator } from '../../Store/Actions/weatherCreator';
 const {useEffect,useState} = React
-export default function Top() {
+function Top(props) {
     //获取登录用户的用户名
     const user = memoryUtils.user
     const { username } = user
     //获取定位和天气信息
-    const [info ,setWeather] =useState([])
-    const {province,city,weather} =info
+    // const [info ,setWeather] =useState([])
+    const {province,city,weather} =props.weather
     useEffect(()=>{
         City().then((res)=>{
             if(res.status == 1){
                 Weather(res.adcode).then((res)=>{
-                    setWeather(res.lives[0])
+                    // setWeather(res.lives[0])
+                    props.weatherCreator(res.lives[0])
                 })
             }
         })
@@ -63,3 +67,12 @@ export default function Top() {
         </Fragment>
     )
 }
+
+export default connect(
+    (state)=>{
+        return {weather:state.weather}
+    },
+    {
+        weatherCreator:weatherCreator
+    }
+)(Top)
