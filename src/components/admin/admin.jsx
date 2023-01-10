@@ -6,10 +6,13 @@ import { Layout } from 'antd';
 import Top from '../Top/'
 import MenuBar from '../menuBar/'
 import Context from '../context/'
-
+import memoryUtils from '../../utils/memoryUtils';
+import { Navigate } from 'react-router-dom';
 const { Header, Sider } = Layout;
 export default function Admin() {
-
+  if(!memoryUtils.user.role){
+    return <Navigate to={'/login'}/>
+  }
   return (
     <Fragment>
       <Layout style={{ height: '100%' }}>

@@ -12,7 +12,6 @@ import storageUtils from '../src/utils/storageUtils'
 export default function App() {
   const user =storageUtils.getUser()
   memoryUtils.user=user
-
   return (
     <Fragment>
         <Routes>
