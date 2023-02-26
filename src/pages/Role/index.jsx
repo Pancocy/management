@@ -11,7 +11,6 @@ import { useState, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 //存储与登录方法的文件
-import storageUtils from '../../utils/storageUtils'
 import memoryUtils from '../../utils/memoryUtils'
 export default function Roles() {
   //获取登录用户的用户名作为当前修改权限的授权人
@@ -26,7 +25,7 @@ export default function Roles() {
     getRoleList().then((res) => {
       setRole(res.data)
     })
-  }, [role])
+  }, [])
   //选中一行的回调
   const selected = (role) => {
     return {
@@ -70,7 +69,7 @@ export default function Roles() {
   //定义权限状态
   const [checked,setChecked] =useState([])
   //从当前选中的角色中解构出需要的数据
-  const {_id,auth_name,auth_time} =currentRole
+  const {_id,auth_time} =currentRole
   const onCheck =(menus)=>{
     setChecked(menus)
   }
@@ -167,6 +166,7 @@ export default function Roles() {
     {
       title: '角色名称',
       dataIndex: 'name',
+      // eslint-disable-next-line
       render: (text) => <a>{text}</a>,
     },
     {

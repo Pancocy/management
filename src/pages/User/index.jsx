@@ -1,5 +1,4 @@
 import React from 'react'
-import PubSub from 'pubsub-js'
 import './index.css'
 import 'dayjs'
 import {
@@ -20,7 +19,7 @@ import { delUser } from '../../api/user/delete'
 import { useEffect, useState, useRef } from 'react'
 export default function User() {
   //定义表格行和列的数据
-  const [data, setData] = useState()
+  const [data, setData] = useState([])
   //定义附带的角色数据
   const [role, setRole] = useState()
   const columns = [
@@ -51,6 +50,7 @@ export default function User() {
       render: (_, data) => (
         <>
           {
+            // eslint-disable-next-line
             role.map((e) => {
               if (e._id === data.role_id) {
                 return e.name
@@ -77,7 +77,7 @@ export default function User() {
       setData(res.data.users)
       setRole(res.data.roles)
     })
-  }, [data])
+  }, [])
   /*修改弹框部分 */
   //定义修改用户按钮的回调
   const [open, setOpen] = useState(false)
@@ -219,7 +219,8 @@ function SelectedRole(props){
   useEffect(()=>{
     const {role} =props
     setroleArr(role)
-  },[])
+    // eslint-disable-next-line
+  },[roleArr])
   const {setRoleId}=props
   const change =(value)=>{
     setRoleId(value)
